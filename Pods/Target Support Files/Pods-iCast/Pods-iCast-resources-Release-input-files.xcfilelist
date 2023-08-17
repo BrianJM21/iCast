@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-iCast/Pods-iCast-resources.sh
+${PODS_ROOT}/google-cast-sdk-no-bluetooth/GoogleCastSDK-ios-4.8.0_static/GoogleCast.framework/GoogleCastCoreResources.bundle
+${PODS_ROOT}/google-cast-sdk-no-bluetooth/GoogleCastSDK-ios-4.8.0_static/GoogleCast.framework/GoogleCastUIResources.bundle
+${PODS_ROOT}/google-cast-sdk-no-bluetooth/GoogleCastSDK-ios-4.8.0_static/GoogleCast.framework/MaterialDialogs.bundle
