@@ -44,7 +44,7 @@ Finalmente la App tiene una función de transmisión de la pantalla del iPhone, 
 
 - **UIKit:** Para el diseño de la interfaz de usuario.
 - **Google FireBase:** Para el servicio de alojamiento temporal de archivos locales.
-- **MVX:** Como arquitectura de diseño principal.
+- **MVC:** Como arquitectura de diseño principal.
 - **Google Cast:** Para la conexión y transmisión a los dispositivos ChromeCast.
 - **ReplayKit:** Para el servicio de grabación de pantalla.
 
