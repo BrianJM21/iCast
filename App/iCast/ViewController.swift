@@ -13,7 +13,7 @@ class ViewController: UIViewController, GCKRequestDelegate, GCKSessionManagerLis
     let mediaStorageService = MediaStorageService()
     lazy var screenRecorder = ScreenRecorder(mediaStorageService: mediaStorageService)
     lazy var mediaView = {
-        let view = UIView(frame: CGRect(x: 0, y: self.view.frame.height - 70 - (UIApplication.shared.keyWindow?.safeAreaInsets.bottom)!, width: self.view.frame.width, height: 70))
+        let view = UIView(frame: CGRect(x: .zero, y: .zero, width: view.frame.width, height: 70))
         return view
     }()
     lazy var miniMediaControlsViewController = {
@@ -146,6 +146,11 @@ class ViewController: UIViewController, GCKRequestDelegate, GCKSessionManagerLis
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIWindow.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIWindow.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(castState), name: NSNotification.Name.gckCastStateDidChange, object: nil)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        mediaView.frame.origin.y = view.frame.height - mediaView.frame.height - view.safeAreaInsets.bottom
     }
     
     @objc func castFromPhotoLibrary() {
